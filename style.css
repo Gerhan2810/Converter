@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0e0614;
+  color: #e9d9ff;
+}
+
+.container {
+  max-width: 480px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #c77dff;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  background: #1b0b2a;
+  color: white;
+  border: 1px solid #8f14b8;
+  border-radius: 6px;
+}
+
+button {
+  background: #8f14b8;
+  font-weight: bold;
+}
+
+.group {
+  margin-top: 12px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+progress {
+  width: 100%;
+  margin-top: 15px;
+}
+
+#preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 80px);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+#preview img {
+  width: 100%;
+  border-radius: 4px;
+}

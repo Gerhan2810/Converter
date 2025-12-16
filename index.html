@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Image Converter</h1>
+
+  <input type="file" id="files" multiple accept="image/*">
+
+  <div class="group">
+    <label>Mode</label>
+    <select id="mode">
+      <option value="compress">Compress Only</option>
+      <option value="png">Compress & Convert → PNG</option>
+      <option value="jpeg">Compress & Convert → JPEG</option>
+      <option value="webp">Compress & Convert → WEBP</option>
+      <option value="avif">Compress & Convert → AVIF</option>
+    </select>
+  </div>
+
+  <div class="group">
+    <label>Target Size (MB)</label>
+    <input type="number" id="targetSize" step="0.1" placeholder="2">
+  </div>
+
+  <div class="group toggle">
+    <input type="checkbox" id="renameToggle">
+    <label for="renameToggle">Rename Output</label>
+  </div>
+
+  <input type="text" id="renameBase" placeholder="udin" disabled>
+
+  <div class="group toggle">
+    <input type="checkbox" id="resizeToggle">
+    <label for="resizeToggle">Enable Resize</label>
+  </div>
+
+  <input type="number" id="maxDim" placeholder="Max dimension px" disabled>
+
+  <button id="start">Convert</button>
+
+  <progress id="progress" value="0" max="100"></progress>
+
+  <div id="preview"></div>
+
+  <a id="downloadZip" style="display:none;">Download ZIP</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
